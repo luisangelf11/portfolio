@@ -1,18 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import BurgerButton from "./BurgerButton";
 
 export default function Menu() {
-    const[click, setClick] = useState(false);
-    const handelClick =()=>{
-        if(click) setClick(false);
-        else setClick(true);
-    }
+  const [click, setClick] = useState(false);
+  const handelClick = () => {
+    if (click) setClick(false);
+    else setClick(true);
+  };
   return (
     <HeaderMenu>
       <h3>Luis Angel Fernandez</h3>
-      <nav className={click === true ? "active": ""}>
+      <nav className={click === true ? "active" : ""}>
         <div className="links">
           <a href="#">Inicio</a>
           <a href="#">Servicios</a>
@@ -44,10 +44,10 @@ const HeaderMenu = styled.header`
     letter-spacing: 10px;
   }
 
-  .active{
-    transition:all .3s ease-in-out;
-    visibility:visible;
-    margin-left:0;
+  .active {
+    transition: all 0.3s ease-in-out;
+    visibility: visible;
+    margin-left: 0;
   }
 
   @media screen and (max-width: 900px) {
@@ -58,10 +58,10 @@ const HeaderMenu = styled.header`
     }
   }
 
-  .links{
-    width:100%;
-    height:70%;
-    margin-top:10px;
+  .links {
+    width: 100%;
+    height: 70%;
+    margin-top: 10px;
   }
 
   nav {
@@ -77,9 +77,9 @@ const HeaderMenu = styled.header`
       margin: 0;
       background-color: rgb(56, 55, 55);
       width: 150px;
-      margin-left:-200px;
-      visibility:hidden;
-      transition:all .3s ease-in-out;
+      margin-left: -200px;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
       height: 100vh;
       z-index: 1000;
       position: fixed;
@@ -87,27 +87,33 @@ const HeaderMenu = styled.header`
 
       a {
         border-bottom: 1px solid #fff;
-        text-transform:uppercase ;
+        text-transform: uppercase;
+        transition: all .4s ease-in-out;
       }
 
-      .links{
-        width:100%;
-        height:80%;
-        display:flex;
-        flex-direction:column;
+      a:hover {
+        border-bottom: 2px solid #fff;
+        padding: 15px;
+      }
+
+      .links {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
       }
     }
 
-    a {
+    a{
       text-decoration: none;
       color: #fff;
       padding: 10px;
-      transition: all 0.2s ease-in-out;
+      transition: all .1s ease-in-out;
       font-weight: 500;
     }
 
     a:hover {
-      padding: 15px;
+      border-bottom: 2px solid #fff;
     }
   }
 
