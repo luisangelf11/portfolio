@@ -6,7 +6,7 @@ import styled from "styled-components";
 export default function Skills() {
   return (
     <SkillsConatiner id="skills">
-      <h2>Tecnologías de desarrollo</h2>
+      <h3>Tecnologías de desarrollo</h3>
       <BoxIcons>
         <FaHtml5 className="icon" />
         <FaCss3Alt className="icon" />
@@ -23,11 +23,12 @@ export default function Skills() {
 const SkillsConatiner = styled.section`
   width: 100%;
   height: 70px;
-  h2 {
+  h3 {
     text-align: center;
     text-transform: uppercase;
     padding: 20px;
-    color: #222;
+    color: #333;
+    letter-spacing:10px;
 
     @media(max-width:500px){
       font-size: 20px;

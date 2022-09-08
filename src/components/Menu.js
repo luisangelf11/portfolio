@@ -14,11 +14,11 @@ export default function Menu() {
       <h3>Luis Angel Fernandez</h3>
       <nav className={click === true ? "active" : ""}>
         <div className="links">
-          <a href="#">Inicio</a>
-          <a href="#">Servicios</a>
+          <a href="#home">Inicio</a>
+          <a href="#services">Servicios</a>
           <a href="#skills">Herramientas</a>
-          <a href="#">Proyectos</a>
-          <a href="#">Contactar</a>
+          <a href="#projects">Proyectos</a>
+          <a href="#contact">Contactar</a>
         </div>
       </nav>
       <div className="burger">
@@ -34,6 +34,11 @@ const HeaderMenu = styled.header`
   background-color: #333;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 900px) {
+    position: fixed;
+    z-index: 999;
+  }
 
   h3 {
     display: block;
@@ -88,7 +93,7 @@ const HeaderMenu = styled.header`
       a {
         border-bottom: 1px solid #fff;
         text-transform: uppercase;
-        transition: all .4s ease-in-out;
+        transition: all 0.4s ease-in-out;
       }
 
       a:hover {
@@ -104,11 +109,11 @@ const HeaderMenu = styled.header`
       }
     }
 
-    a{
+    a {
       text-decoration: none;
       color: #fff;
       padding: 10px;
-      transition: all .1s ease-in-out;
+      transition: all 0.1s ease-in-out;
       font-weight: 500;
     }
 
@@ -118,7 +123,7 @@ const HeaderMenu = styled.header`
   }
 
   .burger {
-    margin-left: 85%;
+    margin-left: 87%;
     @media (min-width: 900px) {
       display: none;
     }

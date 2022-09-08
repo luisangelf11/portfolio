@@ -29,15 +29,28 @@ const BannerContainer = styled.section`
     height: 200px;
     display: block;
     margin: auto;
-    border-radius: 30px 50px;
+    border-radius: 40px 50px 40px 60px;
     padding: 30px;
+  }
+
+  @media (max-width: 900px) {
+    height: 600px;
+
+    img {
+      width: 150px;
+      height: 200px;
+      display: block;
+      margin: auto;
+      border-radius: 90px 100px 90px 110px;
+      padding: 80px;
+    }
   }
 
   h2 {
     text-align: center;
     text-transform: uppercase;
     display: block;
-    padding:5px;
+    padding: 5px;
     color: #fff;
     font-family: monospace;
     white-space: nowrap;
@@ -49,7 +62,7 @@ const BannerContainer = styled.section`
     margin: 1rem auto;
   }
 
-  p{
+  p {
     display: block;
     margin: auto;
     width: 300px;
@@ -59,12 +72,12 @@ const BannerContainer = styled.section`
     color: #fff;
   }
 
-  .box{
-    width:500px;
-    height:200px;
-    margin:auto;
+  .box {
+    width: 500px;
+    height: 200px;
+    margin: auto;
     background-color: rgba(138, 139, 139, 0.507);
-    border-radius:30px 50px 30px 100px;
+    border-radius: 30px 50px 30px 100px;
   }
 
   @keyframes typing {
@@ -79,17 +92,16 @@ const BannerContainer = styled.section`
     }
   }
 
-  @media screen and (max-width:700px) {
-    height: 490px;
-    h2{
-        font-size:18px ;
+  @media screen and (max-width: 700px) {
+    h2 {
+      font-size: 18px;
     }
-    .box{
-    width:350px;
-    height:200px;
-    margin:auto;
-    background-color: rgba(138, 139, 139, 0.507);
-    border-radius:30px 50px 30px 100px;
-  }
+    .box {
+      width: 350px;
+      height: 200px;
+      margin: auto;
+      background-color: rgba(138, 139, 139, 0.507);
+      border-radius: 30px 50px 30px 100px;
+    }
   }
 `;
