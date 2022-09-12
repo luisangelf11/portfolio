@@ -1,3 +1,17 @@
-*{
+* {
   scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;        
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #3d3d3d; 
+  border-radius: 20px;       
+  border: 3px solid #fff;  
 }

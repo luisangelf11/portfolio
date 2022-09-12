@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 import {MdEmail} from 'react-icons/md';
+import toast, { Toaster } from 'react-hot-toast';
 
 const initialValues = {
     name: "",
@@ -17,9 +18,11 @@ export default function ContactForm() {
             [e.target.name]: e.target.value
         });
     }
-
     const handelSubmit=(e)=>{
         e.preventDefault();
+        toast.loading("Enviando mensaje", {
+          duration: 7000
+        });
         fetch("https://formsubmit.co/ajax/luisangelf491@gmail.com", 
         {
             method: "POST",
@@ -27,10 +30,10 @@ export default function ContactForm() {
         })
         .then((res)=> res.ok? res.json(): Promise.reject(res))
         .then((json)=>{
-            alert("Mensaje enviado correctamente");
+            toast.success("Mensaje enviado correctamente");
         })
         .catch((err) =>{
-            alert("Ah ocurrido un error");
+            toast.error("¡UPS! Ocurrió un error inesperado");
         });
 
         setForm(initialValues);
@@ -63,6 +66,10 @@ export default function ContactForm() {
         ></textarea>
         <input type="submit" value="Enviar" />
       </form>
+      <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
     </Contact>
   );
 }

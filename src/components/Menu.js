@@ -115,6 +115,8 @@ const HeaderMenu = styled.header`
       padding: 10px;
       transition: all 0.1s ease-in-out;
       font-weight: 500;
+      text-transform:uppercase;
+      font-size:14px;
     }
 
     a:hover {

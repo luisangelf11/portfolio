@@ -1,0 +1,35 @@
+.hide {
+  opacity: 0;
+}
+
+.active {
+  opacity: 1;
+}
+
+button {
+  background-color: #3d3d3d;
+  padding: 25px;
+  color: #fff;
+  font-size: 18px;
+  bottom: 20px;
+  border-radius: 50%;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  z-index: 999;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 0;
+  outline: 0;
+}
+
+button:hover {
+  opacity: 0.75;
+}
+
+.icon {
+  font-size: 20px;
+  display: block;
+  margin: -10px -10px;
+}
