@@ -31,7 +31,7 @@ const ServicesContainer = styled.section`
   width: 100%;
   background-color: #ccc;
   height: 300px;
-
+  margin-top:30px;
   h3 {
     padding: 20px;
     color: #222;

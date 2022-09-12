@@ -21,7 +21,7 @@ export default function ContactForm() {
     const handelSubmit=(e)=>{
         e.preventDefault();
         toast.loading("Enviando mensaje", {
-          duration: 7000
+          duration: 3000
         });
         fetch("https://formsubmit.co/ajax/luisangelf491@gmail.com", 
         {
@@ -30,10 +30,14 @@ export default function ContactForm() {
         })
         .then((res)=> res.ok? res.json(): Promise.reject(res))
         .then((json)=>{
-            toast.success("Mensaje enviado correctamente");
+            toast.success("Mensaje enviado correctamente", {
+              duration: 4000
+            });
         })
         .catch((err) =>{
-            toast.error("¡UPS! Ocurrió un error inesperado");
+            toast.error("¡UPS! Ocurrió un error inesperado", {
+              duration: 4000
+            });
         });
 
         setForm(initialValues);
